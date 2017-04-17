@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta charset="UTF-8">
+    <title>CORE2016 P2</title>
+    <p id="info"></p>
+    <link href="normal.css" rel="stylesheet" type="text/css" media="screen" >
+    <link href="movil.css" rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" >
+</header>
+<body>
+
+<div id="main">
+<table id="tabla">
+    <tr>
+        <th>Nombre de la Propiedad</th>
+        <th>Value</th>
+    </tr>
+</table>
+</div>
+
+<script type="text/javascript">
+    var table = document.getElementById("tabla");
+    var n = 1;
+    var propiedad = prompt("Introduzca el nombre del objeto");
+    document.getElementById("info").innerHTML = "Objeto solicitado: "+propiedad;
+
+    function mostrarPropiedades(objeto) {
+        for (var i in objeto) {
+            var row = table.insertRow(n);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = i;
+            if(objeto[i] instanceof Object) {
+                cell2.innerHTML = "No imprimible";
+            }
+            else {
+                cell2.innerHTML = objeto[i];
+            }
+            n++;
+        }
+    }
+
+    mostrarPropiedades(eval(propiedad));
+
+</script>
+<footer>
+    <p> <strong> Autor: </strong> Miguel Omeñaca </p>
+    <p> <strong> Contacto: </strong> <a href="mailto:m.omenaca@alumnos.upm.es">m.omenaca@alumnos.upm.es</a></p>
+</footer>
+</body>
+</html>

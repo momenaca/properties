@@ -1,0 +1,30 @@
+body {
+    background-color: azure;
+}
+
+#info {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table th {
+    text-align: center;
+}
+
+tr:hover {
+    background-color: beige;
+}
+
+#tabla {
+    background-color: lightsteelblue;
+    width:100%;
+}
+
+#main {
+    background-position: center;
+}
